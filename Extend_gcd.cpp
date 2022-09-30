@@ -25,17 +25,24 @@ int rev_mod( int a, int p ) {
 
 int main()
 {
-    int n, p;
+    int p = 139;
+    int x = 13;
 
-    cin >> n >> p;
-    vector<int> inv(n+1, -1);
-
-    inv[1] = 1;
-    for ( int i = 2; i <= n; ++i ) {
-        inv[i] = p-(inv[p%i]*(p/i))%p;
-    }
-
-    for ( int i = 1; i <= n; ++i ) {
-        printf("inv[%d] = %d ( %d ) \n", i, inv[i], i*inv[i]%p);
-    }
+    cout << rev_mod(x, p) << endl;
 }
+// int main()
+// {
+//     int n, p;
+
+//     cin >> n >> p;
+//     vector<int> inv(n+1, -1);
+
+//     inv[1] = 1;
+//     for ( int i = 2; i <= n; ++i ) {
+//         inv[i] = p-(inv[p%i]*(p/i))%p;
+//     }
+
+//     for ( int i = 1; i <= n; ++i ) {
+//         printf("inv[%d] = %d ( %d ) \n", i, inv[i], i*inv[i]%p);
+//     }
+// }
